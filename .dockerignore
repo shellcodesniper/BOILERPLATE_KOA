@@ -1,0 +1,12 @@
+Dockerfile
+.github/**
+.vscode/**
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+.gitignore
+docker-compose.yml
+package-lock.json
+yarn-error.log
+dist/**
