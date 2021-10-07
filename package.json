@@ -5,7 +5,7 @@
   "main": "bin/www.ts",
   "repository": "git@github.com:shellcodesniper/BOILERPLATE_KOA.git",
   "author": "KuuWangE <shellcodesniper@icloud.com>",
-  "license": "GPG3",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "test": "TS_NODE_PROJECT='./tsconfig.json' mocha -r node_modules/ts-node/register - r tsconfig-paths/register ./bin/*.spec.ts ./src/**/*.spec.ts",
     "checkOnly": "yarn lint && tsc --noEmit",
