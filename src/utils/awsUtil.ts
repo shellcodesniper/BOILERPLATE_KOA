@@ -85,7 +85,7 @@ namespace AWS_UTIL {
   // NOTE 파일 삭제 함수 (key : path)
 
   export async function getUrl(Key: string): Promise<string> {
-    const res = await s3.getSignedUrlPromise('getObject', { Bucket: bucket, Key});
+    const res = await s3.getSignedUrlPromise('getObject', { Bucket: bucket, Key });
     return res;
   }
   // NOTE 파일 url 가져오는 함수 ( key: post )

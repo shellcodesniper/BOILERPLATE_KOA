@@ -8,6 +8,7 @@
   "license": "GPG3",
   "scripts": {
     "test": "TS_NODE_PROJECT='./tsconfig.json' mocha -r node_modules/ts-node/register - r tsconfig-paths/register ./bin/*.spec.ts ./src/**/*.spec.ts",
+    "checkOnly": "yarn lint && tsc --noEmit",
     "clean": "rm -rf ./dist",
     "lint": "eslint . --ext .ts",
     "prestart": "yarn clean;yarn build",
@@ -22,7 +23,8 @@
     "docker:start": "NODE_ENV=production pm2-docker start ./dist/bin/www.js --node-arg=\"-r ./tsconfig-paths-bootstrap.js\" -i max",
     "vpatch": "clear;npm version patch --no-git-tag-version",
     "vminor": "clear;npm version minor --no-git-tag-version",
-    "vmajor": "clear;npm version major --no-git-tag-version"
+    "vmajor": "clear;npm version major --no-git-tag-version",
+    "prepare": "husky install"
   },
   "dependencies": {
     "aws-sdk": "^2.996.0",

@@ -33,7 +33,7 @@ namespace POST_BASIC_SERVICE {
 
     try {
       await newPost.save();
-      const postId =  newPost._id.toString();
+      const postId = newPost._id.toString();
       const postmap = new PostMapper();
       const siteInfoTemp = await SiteInfo.findOne(data.siteInfoId);
       const writerTemp = await User.findOne(data.writerId);

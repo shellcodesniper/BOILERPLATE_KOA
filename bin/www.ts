@@ -41,6 +41,7 @@ if (isProduction) {
 
   await configInit();
   await burnUp();
+  // eslint-disable-next-line global-require
   require('@src/app');
   // ! DATABASE 실행 완료한경우, 앱실행
 })();
