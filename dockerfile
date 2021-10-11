@@ -1,8 +1,9 @@
-FROM node:14.16-alpine
+FROM node:14-alpine
 
 EXPOSE 3000
 
-RUN apk add python make g++ yarn curl ffmpeg
+RUN apk update
+RUN apk add make g++ yarn curl
 
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
