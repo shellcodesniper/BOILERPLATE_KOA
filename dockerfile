@@ -2,6 +2,8 @@ FROM node:14-alpine
 
 EXPOSE 3000
 
+# NOTE 에러 해결을 위해 https 로 변경
+RUN sed -i -e 's/http:/https:/' /etc/apk/repositories
 RUN apk update
 RUN apk add make g++ yarn curl
 
